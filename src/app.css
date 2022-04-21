@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+}
+
+
+.uper , .nechy{
+    width: 100vw;
+    height: 50%;
+    background-color: red;
+}
+
+
+.nechy{
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+
+
+
+span{
+background-color: green;
+}
