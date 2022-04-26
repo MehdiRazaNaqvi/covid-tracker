@@ -1,35 +1,72 @@
-body{
+body {
     padding: 0;
     margin: 0;
 
 }
 
-.parent{
+.parent {
     width: 100vw;
     height: 100vh;
-    background-color: pink;
+    background-color: rgb(255, 255, 255);
+
+
 }
 
 
-.uper , .nechy{
+.uper,
+.nechy {
     width: 100vw;
-    height: 50%;
-    background-color: red;
+    height: 47%;
+    /* background-color: red; */
+}
+
+.middle{
+    width: 100vw;
+    height: 6%;
+    /* background-color: yellow; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.nechy{
-    background-color: yellow;
+
+.nechy , .uper{
+    /* background-color: rgb(239, 239, 239); */
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: repeat(2 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
     row-gap: 5px;
     column-gap: 5px;
 }
 
 
-
-
-span{
-background-color: green;
+.uper{
+    background-color: antiquewhite;
 }
+
+span {
+    place-self: center;
+    height: 10vh;
+    width: 30vw;
+    max-width: 30vw;
+    min-width: 30vw;
+    background-color: rgb(255, 255, 255);
+    
+    box-shadow: 2px 2px 2px 2px rgb(193, 193, 193);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.form-control{
+    width: 50%;
+}
+
+
