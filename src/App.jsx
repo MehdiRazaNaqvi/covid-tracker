@@ -7,10 +7,10 @@ import { useEffect } from "react"
 const App = () => {
 
 
-    const [apidata, setapidata] = useState([]);
-    const [globaldata, setglobaldata] = useState({Global : {NewDeaths : Number , NewConfirmed : Number , TotalDeaths: Number , TotalConfirmed : Number , TotalRecovered : Number , Date : ""}});
+    const [apidata, setapidata] = useState([{ Country: "" }]);
+    const [globaldata, setglobaldata] = useState({ Global: { NewDeaths: Number, NewConfirmed: Number, TotalDeaths: Number, TotalConfirmed: Number, TotalRecovered: Number, Date: "" } });
 
-    const [citysearch , setcitysearch] = useState("");
+    const [citysearch, setcitysearch] = useState("");
 
 
 
@@ -75,15 +75,51 @@ const App = () => {
 
 
             <div className="middle">
-                <input type="text" className="form-control" onChange={(e) => setcitysearch( e.target.value )  } placeholder="Enter country" /> 
-                <button className="btn btn-outline-dark" onClick={() => {setcitysearch({country : citysearch.var}) ; console.log(citysearch.country) }}>Fetch</button>
-                </div>
 
 
 
 
-            {   
-                apidata.map((v, i) => v.Country == citysearch    ?
+
+                <select onChange={(e) => { setcitysearch(e.target.value) }} className="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option defaultValue="Choooseee">Choose country</option>
+                    {apidata.map((v, i) => (
+
+                        <option value={v.Country} key={i} >
+                            {v.Country}
+                        </option>
+                    ))}
+
+
+
+                </select>
+
+
+
+                {/* <form>
+                    <label >
+
+                        <label defaultValue="Chooseeeee" >
+
+                            <option value="Pakistan">Pak</option>
+                            <option value="India">ind</option>
+
+
+                        </label>
+                    </label>
+                </form> */}
+
+
+
+
+                {/* <input type="text" className="form-control" onChange={(e) => setcitysearch( e.target.value )  } placeholder="Enter country" />  */}
+                {/* <button className="btn btn-outline-dark" onClick={() => {setcitysearch({country : citysearch.var}) ; console.log(citysearch.country) }}>Fetch</button> */}
+            </div>
+
+
+
+
+            {
+                apidata.map((v, i) => v.Country.toLowerCase() == citysearch.toLocaleLowerCase() ?
 
                     <div className="nechy" key={i} >
 

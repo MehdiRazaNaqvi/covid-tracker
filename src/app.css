@@ -60,7 +60,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: large;
+    font-size: medium;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -70,3 +70,43 @@ span {
 }
 
 
+@media screen and (max-width: 900px) {
+    span{
+        font-size: x-small;
+    }
+    .form-control{
+        font-size:  small;
+    }
+}
+
+
+
+
+@media screen and (max-width: 670px) {
+    span{
+        font-size: xx-small;
+    }
+
+    .form-control{
+        font-size: x-small;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 450px) {
+    span{
+        font-size: 50%;
+        text-align: center;
+    }
+
+    .nechy , .uper{
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-rows: repeat(3 , 1fr);
+    }
+
+    .form-control{
+        font-size: xx-small;
+    }
+}
